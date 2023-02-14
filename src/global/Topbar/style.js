@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const Topbarbox = styled.div`
-    width: calc(100% - 220px);
+    width: calc(100% -  250px);
     height: 80px;
     display: flex;
     align-items: center;
