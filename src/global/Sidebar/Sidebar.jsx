@@ -233,10 +233,20 @@ const Rating = [
     }
 ]
 
+
+
 export default function Sidebar() {
   const [openCharList, setOpenCharList] = React.useState(false);
   const [openRaidList, setOpenRaidList] = React.useState(false);
   const [openMythicList, setOpenMythicList] = React.useState(false);
+  const [selectedItem, setSelectedItem] = React.useState(null);
+
+
+  const filteredChars = Classes.filter((classe) => classe.id === selectedItem?.classId);
+  
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+  };
 
   const handleClickChar = () => {
     setOpenCharList(!openCharList);
@@ -253,7 +263,11 @@ export default function Sidebar() {
   return (
     <Sidebarbox>
         <Box>
-            <Avatar src={monk} sx={{width: '150px', height: '150px', margin: 'auto'}}/>
+            {filteredChars.map((c) => (
+                <Avatar src={filteredChars[0].image} sx={{width: '150px', height: '150px', margin: 'auto'}}/>
+            ))
+            
+            }   
         </Box>
         <List
         sx={{ width: '100%', maxWidth: 360, color: '#bbb'}}
@@ -270,7 +284,7 @@ export default function Sidebar() {
         <Collapse in={openCharList} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
             {chars.map(e => {return(
-                <ListItemButton sx={{backgroundColor: '#191D20'}}>
+                <ListItemButton sx={{backgroundColor: '#191D20'}} onClick={() => handleItemClick(e)}>
                     <ListItemAvatar>
                         <Avatar src={e.image} />
                     </ListItemAvatar>
