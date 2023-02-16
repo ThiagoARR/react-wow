@@ -6,17 +6,31 @@ import{
     AccountOptBox,
     AccountBox,
     LoginButton,
-    LoginButtonBox
+    LoginButtonBox,
+    Button
 } from './style'
-
+import ContextManipulation from '../../Context/ContexAPI';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
+import { Box } from '@mui/system';
+import { useContext } from 'react';
 
 const Topbar = () => {
+    const {setSidebarVisible, sidebarVisible} = useContext(ContextManipulation);
+
+    const toggleSidebar = () => {
+        setSidebarVisible(!sidebarVisible)
+        console.log(sidebarVisible)
+    }
+
     return(
         <Topbarbox>
+            <Button sx={{color: 'white'}} onClick={toggleSidebar}>
+                <MenuOutlinedIcon sx={{fontSize: '30px'}}/>
+            </Button>
             <Searchbox>
                 <Search placeholder='Search'/>
                 <IconBox>

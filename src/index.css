@@ -21,5 +21,7 @@ body,
 }
 
 .aa {
-  width: 100%;
+  width: calc(100% - 270px);
+  display: flex;
+  flex-direction: column;
 }

@@ -1,4 +1,5 @@
-import * as React from 'react';
+import {useState, useContext} from 'react';
+import ContextManipulation from '../../Context/ContexAPI';
 import {Sidebarbox, Div} from './style';
 import List from '@mui/material/List';
 import ListItemDecorator from '@mui/joy/ListItemDecorator'
@@ -521,10 +522,11 @@ const Rating = [
 
 
 export default function Sidebar() {
-  const [openCharList, setOpenCharList] = React.useState(false);
-  const [openRaidList, setOpenRaidList] = React.useState(false);
-  const [openMythicList, setOpenMythicList] = React.useState(false);
-  const [selectedItem, setSelectedItem] = React.useState(null);
+  const [openCharList, setOpenCharList] = useState(false);
+  const [openRaidList, setOpenRaidList] = useState(false);
+  const [openMythicList, setOpenMythicList] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
+  const {sidebarVisible} = useContext(ContextManipulation);
 
 
   const filteredChars = Classes.filter((classe) => classe.id === selectedItem?.classId);
@@ -549,14 +551,14 @@ export default function Sidebar() {
   };
 
   return (
-    <Sidebarbox>
+    <Sidebarbox className={sidebarVisible ? 'active':''}>
         <Box>
             {filteredChars.map((c) => (<>
                     <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', pt: 1, pb: 1}}>
                         <Div style={{color: selectedItem.color, fontSize: '20px'}}>{'Level '+selectedItem.level}</Div>
                     </Box>
                     <Avatar src={filteredChars[0].image} sx={{width: '150px', height: '150px', margin: 'auto'}}/>
-                    <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+                    <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '10px', padding: '0 2px'}}>
                         <Div><Avatar sx={{boxShadow: `0px 0px 10px 0px ${selectedItem.color}`}} src={filteredSpec[0].image}/></Div>
                         <Div style={{color: selectedItem.color}}>{selectedItem.name}</Div>
                         <Div style={{color: selectedItem.color}}>{selectedItem.ilvl+' ilvl'}</Div>
@@ -568,7 +570,7 @@ export default function Sidebar() {
             }   
         </Box>
         <List
-        sx={{ width: '100%', maxWidth: 360, color: '#bbb'}}
+        sx={{ width: '100%', maxWidth: 360, color: '#bbb', marginTop: '10px'}}
         component="nav"
         aria-labelledby="nested-list-subheader"
         >

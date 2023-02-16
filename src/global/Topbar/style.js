@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 
 export const Topbarbox = styled.div`
-    width: calc(100% -  250px);
+    width: calc(100% - 270px);
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2px 15px;
     position: fixed;
+    padding: 2px 15px;
     backdrop-filter: blur(30px);
 `;
 
@@ -81,7 +81,13 @@ export const LoginButton = styled.button`
     border: none;
     color: white;
     font-weight: bold;
+`;
+
+export const Button = styled.button`
+    background-color: none;
+    border: none;
 `
+
 
 
 /*100: "#cdcfd2",
