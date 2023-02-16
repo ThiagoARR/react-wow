@@ -7,3 +7,7 @@ export const Sidebarbox = styled.div`
     background-color: #15181B;
     padding: 10px;
 `;
+
+export const Div = styled.div`
+    
+`

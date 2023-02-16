@@ -1,6 +1,5 @@
 import * as React from 'react';
-import {Sidebarbox} from './style';
-import ListSubheader from '@mui/material/ListSubheader';
+import {Sidebarbox, Div} from './style';
 import List from '@mui/material/List';
 import ListItemDecorator from '@mui/joy/ListItemDecorator'
 import ListItemButton from '@mui/material/ListItemButton';
@@ -8,19 +7,12 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
-import FolderIcon from '@mui/icons-material/Folder';
 import Collapse from '@mui/material/Collapse';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import DraftsIcon from '@mui/icons-material/Drafts';
-import SendIcon from '@mui/icons-material/Send';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import StarBorder from '@mui/icons-material/StarBorder';
 import { Box } from '@mui/system';
-import {GiAngelWings, GiAngelOutfit, GiDungeonGate, GiCaveEntrance, GiTwoCoins, GiRank3} from 'react-icons/gi'
+import {GiDungeonGate, GiTwoCoins, GiRank3} from 'react-icons/gi'
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
-import BedtimeIcon from '@mui/icons-material/Bedtime';
-import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import monk from '../../Assets/monks.png'
 import shaman from '../../Assets/shaman.png'
 import dh from '../../Assets/demonhunter.png'
@@ -33,6 +25,46 @@ import priest from '../../Assets/priest.png'
 import mage from '../../Assets/mage.png'
 import druid from '../../Assets/druid.png'
 import warlock from '../../Assets/warlock.png'
+import ww from '../../Assets/windwalker.jpg';
+import windwalker from '../../Assets/windwalker.jpg';
+import brewmaster from '../../Assets/brewmaster.jpg';
+import mistweaver from '../../Assets/mistweaver.jpg';
+import affliction from '../../Assets/affliction.jpg';
+import demonology from '../../Assets/demonology.jpg';
+import destruction from '../../Assets/destruction.jpg';
+import blood from '../../Assets/blood.jpg';
+import frostdk from '../../Assets/frost.jpg';
+import unholy from '../../Assets/unholy.jpg';
+import arcane from '../../Assets/arcane.jpg';
+import fire from '../../Assets/fire.jpg';
+import frost from '../../Assets/ice.jpg';
+import survival from '../../Assets/survival.jpg';
+import marksman from '../../Assets/marksman.jpg';
+import beastmaster from '../../Assets/beastmaster.jpg';
+import elemental from '../../Assets/elemental.jpg';
+import enhancement from '../../Assets/enhancement.jpg';
+import restoration from '../../Assets/restoration.jpg';
+import vengeance from '../../Assets/vengeance.jpg';
+import havoc from '../../Assets/havoc.jpg';
+import arms from '../../Assets/arms.jpg';
+import fury from '../../Assets/fury.jpg';
+import protection from '../../Assets/protection.jpg';
+import retribution from '../../Assets/retribution.jpg';
+import holy from '../../Assets/holypala.jpg';
+import protectionp from '../../Assets/protectionpala.jpg';
+import sub from '../../Assets/sub.jpg';
+import outlaw from '../../Assets/outlaw.jpg';
+import assassination from '../../Assets/assassination.jpg';
+import preservation from '../../Assets/preservation.jpg';
+import devastation from '../../Assets/devastation.jpg';
+import guardian from '../../Assets/bear.jpg';
+import balance from '../../Assets/balance.jpg';
+import feral from '../../Assets/feral.jpg';
+import restauration from '../../Assets/restauration.jpg';
+import discipline from '../../Assets/discipline.jpg';
+import holypr from '../../Assets/holy.jpg';
+import shadow from '../../Assets/shadow.jpg';
+
 
 const Classes = [
     {
@@ -102,6 +134,237 @@ const Classes = [
     }
 ]
 
+const Specs = [
+    {
+        id: 1,
+        name: 'Windwalker',
+        image: windwalker,
+        classId: 1
+    },
+    {
+        id: 2,
+        name: 'Brewmaster',
+        image: brewmaster,
+        classId: 1
+    },
+    {
+        id: 3,
+        name: 'Mistweaver',
+        image: mistweaver,
+        classId: 1
+    },
+    {
+        id: 4,
+        name: 'Elemental',
+        image: elemental,
+        classId: 2
+    },
+    {
+        id: 5,
+        name: 'Enhancement',
+        image: enhancement,
+        classId: 2
+    },
+    {
+        id: 6,
+        name: 'Restoration',
+        image: restoration,
+        classId: 2
+    },
+    {
+        id: 7,
+        name: 'Blood',
+        image: blood,
+        classId: 3
+    },
+    {
+        id: 8,
+        name: 'Frost',
+        image: frostdk,
+        classId: 3
+    },
+    {
+        id: 9,
+        name: 'Unholy',
+        image: unholy,
+        classId: 3
+    },
+    {
+        id: 10,
+        name: 'Marksmanship',
+        image: marksman,
+        classId: 4
+    },
+    {
+        id: 11,
+        name: 'Survival',
+        image: survival,
+        classId: 4
+    },
+    {
+        id: 12,
+        name: 'Beastmaster',
+        image: beastmaster,
+        classId: 4
+    },
+    {
+        id: 13,
+        name: 'Fire',
+        image: fire,
+        classId: 5
+    },
+    {
+        id: 14,
+        name: 'Frost',
+        image: frost,
+        classId: 5
+    },
+    {
+        id: 15,
+        name: 'Arcane',
+        image: arcane,
+        classId: 5
+    },
+    {
+        id: 16,
+        name: 'Affliction',
+        image: affliction,
+        classId: 6
+    },
+    {
+        id: 17,
+        name: 'Destruction',
+        image: destruction,
+        classId: 6
+    },
+    {
+        id: 18,
+        name: 'Demonology',
+        image: demonology,
+        classId: 6
+    },
+    {
+        id: 19,
+        name: 'Devastation',
+        image: devastation,
+        classId: 7
+    },
+    {
+        id: 20,
+        name: 'Preservation',
+        image: preservation,
+        classId: 7
+    },
+    {
+        id: 21,
+        name: 'Guardian',
+        image: guardian,
+        classId: 8
+    },
+    {
+        id: 22,
+        name: 'Balance',
+        image: balance,
+        classId: 8
+    },
+    {
+        id: 23,
+        name: 'Feral',
+        image: feral,
+        classId: 8
+    },
+    {
+        id: 24,
+        name: 'Restauration',
+        image: restauration,
+        classId: 8
+    },
+    {
+        id: 25,
+        name: 'Discipline',
+        image: discipline,
+        classId: 9
+    },
+    {
+        id: 26,
+        name: 'Holy',
+        image: holypr,
+        classId: 9
+    },
+    {
+        id: 27,
+        name: 'Shadow',
+        image: shadow,
+        classId: 9
+    },
+    {
+        id: 28,
+        name: 'Protection',
+        image: protectionp,
+        classId: 10
+    },
+    {
+        id: 29,
+        name: 'Holy',
+        image: holy,
+        classId: 10
+    },
+    {
+        id: 30,
+        name: 'Retribution',
+        image: retribution,
+        classId: 10
+    },
+    {
+        id: 31,
+        name: 'Protection',
+        image: protection,
+        classId: 11
+    },
+    {
+        id: 32,
+        name: 'Arms',
+        image: arms,
+        classId: 11
+    },
+    {
+        id: 33,
+        name: 'Fury',
+        image: fury,
+        classId: 11
+    },
+    {
+        id: 34,
+        name: 'Assassination',
+        image: assassination,
+        classId: 12
+    },
+    {
+        id: 35,
+        name: 'Outlaw',
+        image: outlaw,
+        classId: 12
+    },
+    {
+        id: 36,
+        name: 'Subtetly',
+        image: sub,
+        classId: 12
+    },
+    {
+        id: 37,
+        name: 'Vegeance',
+        image: vengeance,
+        classId: 13
+    },
+    {
+        id: 38,
+        name: 'Havoc',
+        image: havoc,
+        classId: 13
+    }
+]
+
 const chars = [
     {
         id: 1,
@@ -110,7 +373,8 @@ const chars = [
         ilvl: '410',
         color: '#00FF98',
         image: 'https://render.worldofwarcraft.com/us/character/azralon/104/98123624-avatar.jpg',
-        classId: 1
+        classId: 1,
+        activeSpecId: 1
 
     },
     {
@@ -120,7 +384,8 @@ const chars = [
         ilvl: '399',
         color: '#2459FF',
         image: 'https://render.worldofwarcraft.com/us/character/azralon/246/98540790-avatar.jpg',
-        classId: 2
+        classId: 2,
+        activeSpecId: 5
     },
     {
         id: 3,
@@ -129,7 +394,8 @@ const chars = [
         ilvl: '399',
         color: '#A330C9',
         image: 'https://render.worldofwarcraft.com/us/character/azralon/17/153029393-avatar.jpg',
-        classId: 13
+        classId: 13,
+        activeSpecId: 38
     },
     {
         id: 4,
@@ -138,16 +404,18 @@ const chars = [
         ilvl: '399',
         color: '#FFF469',
         image: 'https://render.worldofwarcraft.com/us/character/azralon/215/161678039-avatar.jpg',
-        classId: 12
+        classId: 12,
+        activeSpecId: 35
     },
     {
         id: 5,
         name: 'Korthroz',
         level:'28',
-        ilvl: '399',
+        ilvl: '78',
         color: '#C79C6E',
         image: 'https://render.worldofwarcraft.com/us/character/stormrage/226/250912994-avatar.jpg',
-        classId: 11
+        classId: 11,
+        activeSpecId: 33
     },
     {
         id: 6,
@@ -156,7 +424,9 @@ const chars = [
         ilvl: '399',
         color: '#33937F',
         image: 'https://render.worldofwarcraft.com/us/character/azralon/3/193860867-avatar.jpg',
-        classId: 7
+        classId: 7,
+        activeSpecId: 19
+
     },
     {
         id: 7,
@@ -165,7 +435,9 @@ const chars = [
         ilvl: '399',
         color: '#FF7D0A',
         image: 'https://render.worldofwarcraft.com/us/character/azralon/214/98237398-avatar.jpg',
-        classId: 8
+        classId: 8,
+        activeSpecId: 21
+
     },
     {
         id: 8,
@@ -174,7 +446,8 @@ const chars = [
         ilvl: '399',
         color: '#69CCF0',
         image: 'https://render.worldofwarcraft.com/us/character/stormrage/18/247854610-avatar.jpg',
-        classId: 5
+        classId: 5,
+        activeSpecId: 15
     },
     {
         id: 9,
@@ -183,7 +456,9 @@ const chars = [
         ilvl: '399',
         color: '#C41F3B',
         image: 'https://render.worldofwarcraft.com/us/character/azralon/218/97829338-avatar.jpg',
-        classId: 3
+        classId: 3,
+        activeSpecId: 9
+
     },
 ]
 
@@ -226,7 +501,7 @@ const Dungeons = [
     {
         name: `Court of Stars`,
         image: 'https://render.worldofwarcraft.com/us/zones/court-of-stars-small.jpg'
-    },
+    }
 ]
 
 const Gold = [
@@ -254,7 +529,10 @@ export default function Sidebar() {
 
   const filteredChars = Classes.filter((classe) => classe.id === selectedItem?.classId);
 
+  const filteredSpec = Specs.filter((spec) => spec.id === selectedItem?.activeSpecId)
+
   const handleItemClick = (item) => {
+    setOpenCharList(!openCharList);
     setSelectedItem(item);
   };
 
@@ -273,8 +551,18 @@ export default function Sidebar() {
   return (
     <Sidebarbox>
         <Box>
-            {filteredChars.map((c) => (
-                <Avatar src={filteredChars[0].image} sx={{width: '150px', height: '150px', margin: 'auto'}}/>
+            {filteredChars.map((c) => (<>
+                    <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', pt: 1, pb: 1}}>
+                        <Div style={{color: selectedItem.color, fontSize: '20px'}}>{'Level '+selectedItem.level}</Div>
+                    </Box>
+                    <Avatar src={filteredChars[0].image} sx={{width: '150px', height: '150px', margin: 'auto'}}/>
+                    <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+                        <Div><Avatar sx={{boxShadow: `0px 0px 10px 0px ${selectedItem.color}`}} src={filteredSpec[0].image}/></Div>
+                        <Div style={{color: selectedItem.color}}>{selectedItem.name}</Div>
+                        <Div style={{color: selectedItem.color}}>{selectedItem.ilvl+' ilvl'}</Div>
+                    </Box>
+                </>
+
             ))
             
             }   
