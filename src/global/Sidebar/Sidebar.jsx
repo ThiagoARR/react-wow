@@ -23,6 +23,16 @@ import BedtimeIcon from '@mui/icons-material/Bedtime';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import monk from '../../Assets/monks.png'
 import shaman from '../../Assets/shaman.png'
+import dh from '../../Assets/demonhunter.png'
+import rogue from '../../Assets/rogue.png'
+import dk from '../../Assets/deathknight.png'
+import hunter from '../../Assets/hunter.png'
+import warrior from '../../Assets/warrior.png'
+import paladin from '../../Assets/paladin.png'
+import priest from '../../Assets/priest.png'
+import mage from '../../Assets/mage.png'
+import druid from '../../Assets/druid.png'
+import warlock from '../../Assets/warlock.png'
 
 const Classes = [
     {
@@ -38,57 +48,57 @@ const Classes = [
     {
         id: 3,
         class: 'Death Knight',
-        image: monk
+        image: dk
     },
     {
         id: 4,
         class: 'Hunter',
-        image: shaman
+        image: hunter
     },
     {
         id: 5,
         class: 'Mage',
-        image: monk
+        image: mage
+    },
+    {
+        id: 6,
+        class: 'Warlock',
+        image: warlock
     },
     {
         id: 7,
-        class: 'Warlock',
-        image: shaman
-    },
-    {
-        id: 8,
         class: 'Evoker',
         image: monk
     },
     {
-        id: 9,
+        id: 8,
         class: 'Druid',
-        image: shaman
+        image: druid
+    },
+    {
+        id: 9,
+        class: 'Priest',
+        image: priest
     },
     {
         id: 10,
-        class: 'Priest',
-        image: monk
+        class: 'Paladin',
+        image: paladin
     },
     {
         id: 11,
-        class: 'Paladin',
-        image: shaman
+        class: 'Warrior',
+        image: warrior
     },
     {
         id: 12,
-        class: 'Warrior',
-        image: monk
+        class: 'Rogue',
+        image: rogue
     },
     {
         id: 13,
-        class: 'Rogue',
-        image: shaman
-    },
-    {
-        id: 14,
         class: 'Demon Hunter',
-        image: monk
+        image: dh
     }
 ]
 
@@ -119,7 +129,7 @@ const chars = [
         ilvl: '399',
         color: '#A330C9',
         image: 'https://render.worldofwarcraft.com/us/character/azralon/17/153029393-avatar.jpg',
-        classId: 14
+        classId: 13
     },
     {
         id: 4,
@@ -128,7 +138,7 @@ const chars = [
         ilvl: '399',
         color: '#FFF469',
         image: 'https://render.worldofwarcraft.com/us/character/azralon/215/161678039-avatar.jpg',
-        classId: 13
+        classId: 12
     },
     {
         id: 5,
@@ -137,7 +147,7 @@ const chars = [
         ilvl: '399',
         color: '#C79C6E',
         image: 'https://render.worldofwarcraft.com/us/character/stormrage/226/250912994-avatar.jpg',
-        classId: 12
+        classId: 11
     },
     {
         id: 6,
@@ -146,7 +156,7 @@ const chars = [
         ilvl: '399',
         color: '#33937F',
         image: 'https://render.worldofwarcraft.com/us/character/azralon/3/193860867-avatar.jpg',
-        classId: 8
+        classId: 7
     },
     {
         id: 7,
@@ -155,7 +165,7 @@ const chars = [
         ilvl: '399',
         color: '#FF7D0A',
         image: 'https://render.worldofwarcraft.com/us/character/azralon/214/98237398-avatar.jpg',
-        classId: 9
+        classId: 8
     },
     {
         id: 8,
@@ -243,7 +253,7 @@ export default function Sidebar() {
 
 
   const filteredChars = Classes.filter((classe) => classe.id === selectedItem?.classId);
-  
+
   const handleItemClick = (item) => {
     setSelectedItem(item);
   };
