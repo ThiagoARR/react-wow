@@ -1,10 +1,13 @@
 import styled from "styled-components";
-import Wow from '../../Assets/wow.jpg'
+import Wow from '../../Assets/dragonflight.jpg'
 
 export const LandingPageBox = styled.div`
     width: 100%;
-    height: 400px;
-    background: linear-gradient( rgba(19, 23, 26, 0.5), rgba(19, 23, 26, 1) ), url(${Wow});
+    height: 480px;
+    margin-top: -80px;
+    background: linear-gradient( rgba(19, 23, 26, 0.1), rgba(19, 23, 26, 1) ), url(${Wow});
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -28,12 +31,17 @@ export const LandingPageBox = styled.div`
         color: white;
         font-weight: normal;
     }
+`;
 
-    button{
-        padding: 5px 10px;
-        border-radius: 25px;
-        border: none;
-        background: yellow;
-        margin-top: 10px;
+export const Slogan = styled.h1`
+    color: white
+
+    b {
+        color:#9D7B16;
     }
+`;
+
+export const Sublines = styled.h5`
+    color: white;
+    font-weight: normal;
 `;

@@ -25,3 +25,17 @@ body,
   display: flex;
   flex-direction: column;
 }
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #515351 #15181b;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    display: none;
+    width: 7px;
+  }

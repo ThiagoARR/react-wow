@@ -27,11 +27,12 @@ const Topbar = () => {
     }
 
     return(
-        <Topbarbox>
-            <Button sx={{color: 'white'}} onClick={toggleSidebar}>
-                <MenuOutlinedIcon sx={{fontSize: '30px'}}/>
-            </Button>
+        <Topbarbox sidebarVisible={sidebarVisible}>
+            
             <Searchbox>
+                <Box sx={{color: 'white', display: 'flex', marginRight: '15px'}} onClick={toggleSidebar}>
+                    <MenuOutlinedIcon sx={{fontSize: '30px'}}/>
+                </Box>
                 <Search placeholder='Search'/>
                 <IconBox>
                     <SearchOutlinedIcon />

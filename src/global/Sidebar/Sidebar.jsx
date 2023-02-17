@@ -559,7 +559,7 @@ export default function Sidebar() {
                     </Box>
                     <Avatar src={filteredChars[0].image} sx={{width: '150px', height: '150px', margin: 'auto'}}/>
                     <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '10px', padding: '0 2px'}}>
-                        <Div><Avatar sx={{boxShadow: `0px 0px 10px 0px ${selectedItem.color}`}} src={filteredSpec[0].image}/></Div>
+                        <Div><Avatar sx={{boxShadow: `0px 0px 7px 0px ${selectedItem.color}`}} src={filteredSpec[0].image}/></Div>
                         <Div style={{color: selectedItem.color}}>{selectedItem.name}</Div>
                         <Div style={{color: selectedItem.color}}>{selectedItem.ilvl+' ilvl'}</Div>
                     </Box>
@@ -574,6 +574,7 @@ export default function Sidebar() {
         component="nav"
         aria-labelledby="nested-list-subheader"
         >
+
         <ListItemButton onClick={handleClickChar} sx={{backgroundColor: '#1C2227', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTopLeftRadius: '7px', borderTopRightRadius: '7px'}}>
             <ListItemDecorator>
                 <PeopleAltIcon />

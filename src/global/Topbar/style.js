@@ -2,12 +2,11 @@ import styled from "styled-components";
 
 
 export const Topbarbox = styled.div`
-    width: calc(100% - 270px);
+    width: 100%;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
     padding: 2px 15px;
     backdrop-filter: blur(30px);
 `;
@@ -52,7 +51,6 @@ export const AccountBox = styled.div`
     justify-content: space-between;
     height: 30px;
     align-items: center;
-    
 `;
 
 export const AccountOptBox = styled.div`
@@ -61,6 +59,7 @@ export const AccountOptBox = styled.div`
     align-items: center;
     border-radius: 50%;
     transition: .2s;
+    margin: 0px 3px;
     &&:hover{
         background: #35414c;
     }
@@ -71,6 +70,7 @@ export const AccountOptBox = styled.div`
 
 export const LoginButtonBox = styled.div`
     display: flex;
+    margin: 0 3px;
 `
 
 export const LoginButton = styled.button`
@@ -81,6 +81,10 @@ export const LoginButton = styled.button`
     border: none;
     color: white;
     font-weight: bold;
+    transition: .2s;
+    &&:hover{
+        background-color: #0058BA
+    }
 `;
 
 export const Button = styled.button`
