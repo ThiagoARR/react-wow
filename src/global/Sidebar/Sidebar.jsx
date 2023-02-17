@@ -598,7 +598,7 @@ export default function Sidebar() {
             })}
             </List>
         </Collapse>
-        <Box sx={{display: 'flex', alignItems: 'center', borderBottomLeftRadius: '7px', borderBottomRightRadius: '7px', backgroundColor: '#1C2227'}}>
+        {/* <Box sx={{display: 'flex', alignItems: 'center', borderBottomLeftRadius: '7px', borderBottomRightRadius: '7px', backgroundColor: '#1C2227'}}>
             {Gold.map(e => {return (
             <ListItemButton>
                 <ListItemText primary={e.time+'g'} sx={{color:'yellow', textAlign: 'center'}}/>
@@ -611,7 +611,7 @@ export default function Sidebar() {
                 <GiRank3 color={`${e.rating > 2499 ? '#A982B7': '#BB86C0'}`}/>
             </ListItemButton>)
             })}
-        </Box>
+        </Box> */}
         <ListItemButton onClick={handleClickRaid} sx={{marginTop: '10px', backgroundColor: '#1C2227', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTopLeftRadius: '7px', borderTopRightRadius: '7px'}}>
             <ListItemDecorator>
                 <GiDungeonGate />

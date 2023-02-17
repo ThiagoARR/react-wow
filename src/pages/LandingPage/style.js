@@ -4,6 +4,7 @@ import Wow from '../../Assets/dragonflight.jpg'
 export const LandingPageBox = styled.div`
     width: 100%;
     height: 480px;
+    overflow: auto;
     margin-top: -80px;
     background: linear-gradient( rgba(19, 23, 26, 0.1), rgba(19, 23, 26, 1) ), url(${Wow});
     background-size: cover;
