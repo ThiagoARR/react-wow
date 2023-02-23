@@ -16,7 +16,7 @@ import holypr from '../../Assets/holy.jpg';
 
 const LandingPage = () => {
     return(
-        <Box sx={{width: '100%'}}>
+        <Box sx={{width: '100%', marginTop: '-80px'}}>
             <LandingPageBox>
                 <Box sx={{marginLeft: '40px', marginBottom: '40px', fontSize: '23px'}}>
                     <Slogan>Toda a progressão dos seus personagens</Slogan>
@@ -31,7 +31,7 @@ const LandingPage = () => {
                     <Box sx={{flex: '1', boxShadow: '0px 0px 3px 0px rgba(19, 23, 26, 1)', height: '3px', backgroundColor: '#1A2023', borderRadius: '7px'}}></Box>
                 </Box>
                 <Box sx={{display: 'flex', justifyContent: 'flex-start', marginTop: '20px', gap:'10px', width: '100%', overflow: 'auto'}}>
-                    <Card sx={{ width: 300, maxWidth: 300, background: '#1C2227', boxShadow: '0px 0px 10px 0px black'}}>
+                    <Card sx={{ width: 300, maxWidth: 300, minWidth:300, background: '#1C2227', boxShadow: '0px 0px 10px 0px black'}}>
                         <CardMedia
                             sx={{ height: 140 }}
                             image="https://render.worldofwarcraft.com/us/zones/the-nokhud-offensive-small.jpg"
@@ -53,7 +53,7 @@ const LandingPage = () => {
                             </Box>
                         </CardContent>
                     </Card>
-                    <Card sx={{ width: 300, maxWidth: 300, background: '#1C2227', boxShadow: '0px 0px 10px 0px black'}}>
+                    <Card sx={{ width: 300, maxWidth: 300, minWidth:300, background: '#1C2227', boxShadow: '0px 0px 10px 0px black'}}>
                         <CardMedia
                             sx={{ height: 140 }}
                             image="https://render.worldofwarcraft.com/us/zones/the-azure-vault-small.jpg"
@@ -75,7 +75,7 @@ const LandingPage = () => {
                             </Box>
                         </CardContent>
                     </Card>
-                    <Card sx={{ width: 300, maxWidth: 300, background: '#1C2227', boxShadow: '0px 0px 10px 0px black'}}>
+                    <Card sx={{ width: 300, maxWidth: 300, minWidth:300,background: '#1C2227', boxShadow: '0px 0px 10px 0px black'}}>
                         <CardMedia
                             sx={{ height: 140 }}
                             image="https://render.worldofwarcraft.com/us/zones/ruby-life-pools-small.jpg"
@@ -97,7 +97,7 @@ const LandingPage = () => {
                             </Box>
                         </CardContent>
                     </Card>
-                    <Card sx={{ width: 300, maxWidth: 300, background: '#1C2227', boxShadow: '0px 0px 10px 0px black'}}>
+                    <Card sx={{ width: 300, maxWidth: 300,minWidth:300, background: '#1C2227', boxShadow: '0px 0px 10px 0px black'}}>
                         <CardMedia
                             sx={{ height: 140 }}
                             image="https://render.worldofwarcraft.com/us/zones/temple-of-the-jade-serpent-small.jpg"
